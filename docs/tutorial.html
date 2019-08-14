@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Getting started with py_qs_example &#8212; quickstart-example 0.1.0 documentation</title>
+    <title>Getting started with processfiles &#8212; processfiles 0.1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,8 +14,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="py_qs_example" href="api/modules.html" />
-    <link rel="prev" title="Welcome to Quick Start Example documentation!" href="index.html" />
+    <link rel="next" title="processfiles" href="api/modules.html" />
+    <link rel="prev" title="Welcome to Python Process Files documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,25 +32,33 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="getting-started-with-py-qs-example">
-<h1>Getting started with py_qs_example<a class="headerlink" href="#getting-started-with-py-qs-example" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="getting-started-with-processfiles">
+<h1>Getting started with processfiles<a class="headerlink" href="#getting-started-with-processfiles" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install via:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">py_qs_example</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">processfiles</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>Some highlighted functionality from my module.</p>
 <p>This is a simple example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">py_qs_example</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">processfiles</span> <span class="k">import</span> <span class="n">FileProcessTracker</span>
 
-<span class="n">obj</span> <span class="o">=</span> <span class="n">py_qs_example</span><span class="o">.</span><span class="n">mymodule</span><span class="o">.</span><span class="n">ExampleClass</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
+<span class="n">file_tracker</span> <span class="o">=</span> <span class="n">FileProcessTracker</span><span class="p">(</span>
+    <span class="n">folder</span><span class="o">=</span><span class="s1">&#39;myfolder&#39;</span><span class="p">,</span>
+    <span class="n">restart</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">file_types</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;csv&#39;</span><span class="p">,)</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_tracker</span><span class="o">.</span><span class="n">file_generator</span><span class="p">():</span>
+    <span class="c1"># Do stuff on each file here</span>
 </pre></div>
 </div>
+<p>Then say an error occurs while processing a file. The same exact script can be
+run again, and it will resume with the last file, rather than processing all
+files again.</p>
 </div>
 </div>
 
@@ -63,21 +71,21 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started with py_qs_example</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started with processfiles</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/modules.html">py_qs_example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">processfiles</a></li>
 </ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Quick Start Example documentation!</a></li>
-      <li>Next: <a href="api/modules.html" title="next chapter">py_qs_example</a></li>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Python Process Files documentation!</a></li>
+      <li>Next: <a href="api/modules.html" title="next chapter">processfiles</a></li>
   </ul></li>
 </ul>
 </div>

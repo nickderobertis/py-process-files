@@ -1,4 +1,4 @@
-Getting started with py_qs_example
+Getting started with processfiles
 **********************************
 
 Install
@@ -6,16 +6,24 @@ Install
 
 Install via::
 
-    pip install py_qs_example
+    pip install processfiles
 
 Usage
 =========
 
-Some highlighted functionality from my module.
-
 This is a simple example::
 
-    import py_qs_example
+    from processfiles import FileProcessTracker
 
-    obj = py_qs_example.mymodule.ExampleClass(5, int)
-    print('done')
+    file_tracker = FileProcessTracker(
+        folder='myfolder',
+        restart=False,
+        file_types=('csv',)
+    )
+
+    for file in file_tracker.file_generator():
+        # Do stuff on each file here
+
+Then say an error occurs while processing a file. The same exact script can be
+run again, and it will resume with the last file, rather than processing all
+files again.

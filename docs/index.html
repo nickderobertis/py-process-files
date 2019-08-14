@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Quick Start Example documentation! &#8212; quickstart-example 0.1.0 documentation</title>
+    <title>Welcome to Python Process Files documentation! &#8212; processfiles 0.1.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting started with py_qs_example" href="tutorial.html" />
+    <link rel="next" title="Getting started with processfiles" href="tutorial.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -31,12 +31,15 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-quick-start-example-documentation">
-<h1>Welcome to Quick Start Example documentation!<a class="headerlink" href="#welcome-to-quick-start-example-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Some intro text. To get started, look here.</p>
+  <div class="section" id="welcome-to-python-process-files-documentation">
+<h1>Welcome to Python Process Files documentation!<a class="headerlink" href="#welcome-to-python-process-files-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Use this tool to select files of given file types in a folder, and track whether these files have been processed,
+regardless of whether the script needs to be run multiple times. Stores progress on the files as a text file in the
+same folder, so that a long-running operation on many files can be resumed where it left off if it was stopped.
+It will also automatically estimate time to completion.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting started with py_qs_example</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting started with processfiles</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#install">Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial.html#usage">Usage</a></li>
 </ul>
@@ -45,59 +48,31 @@
 </div>
 <div class="section" id="an-overview">
 <h2>An overview<a class="headerlink" href="#an-overview" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="my-module">
-<h3>My Module<a class="headerlink" href="#my-module" title="Permalink to this headline">¶</a></h3>
-<p>Some highlighted functionality from my module.</p>
-<p>This is a simple example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">py_qs_example</span>
-
-<span class="n">obj</span> <span class="o">=</span> <span class="n">py_qs_example</span><span class="o">.</span><span class="n">mymodule</span><span class="o">.</span><span class="n">ExampleClass</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/py_qs_example.html#py_qs_example.mymodule.ExampleClass" title="py_qs_example.mymodule.ExampleClass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">py_qs_example.mymodule.ExampleClass</span></code></a>(num[, klass])</p></td>
-<td><p>An example class created from the pypi-sphinx-quickstart tutorial.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/processfiles.html#processfiles.files.FileProcessTracker" title="processfiles.files.FileProcessTracker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processfiles.files.FileProcessTracker</span></code></a>([…])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/py_qs_example.html#py_qs_example.mymodule.example_function" title="py_qs_example.mymodule.example_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">py_qs_example.mymodule.example_function</span></code></a>(…)</p></td>
-<td><p>Example for function documentation.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="my-package">
-<h3>My Package<a class="headerlink" href="#my-package" title="Permalink to this headline">¶</a></h3>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="api/py_qs_example.mypackage.html#py_qs_example.mypackage.module.ExampleClass2" title="py_qs_example.mypackage.module.ExampleClass2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">py_qs_example.mypackage.module.ExampleClass2</span></code></a>(…)</p></td>
-<td><p>An example class created from the pypi-sphinx-quickstart tutorial.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="api/py_qs_example.mypackage.html#py_qs_example.mypackage.module.example_function2" title="py_qs_example.mypackage.module.example_function2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">py_qs_example.mypackage.module.example_function2</span></code></a>(…)</p></td>
-<td><p>Example for function documentation.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="api/processfiles.html#processfiles.timing.TimeTracker" title="processfiles.timing.TimeTracker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processfiles.timing.TimeTracker</span></code></a>(folder[, …])</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
-</div>
 <div class="section" id="api-documentation">
 <h3>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h3>
 <p>A full list of modules</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/modules.html">py_qs_example</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/py_qs_example.html">py_qs_example package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/py_qs_example.html#subpackages">Subpackages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/py_qs_example.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/py_qs_example.html#module-py_qs_example.mymodule">py_qs_example.mymodule module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/py_qs_example.html#module-py_qs_example">Module contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">processfiles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/processfiles.html">processfiles package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/processfiles.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/processfiles.html#module-processfiles.files">processfiles.files module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/processfiles.html#module-processfiles.timing">processfiles.timing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/processfiles.html#module-processfiles">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -125,16 +100,16 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table of Contents</a></h3>
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting started with py_qs_example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting started with processfiles</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api/modules.html">py_qs_example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">processfiles</a></li>
 </ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="tutorial.html" title="next chapter">Getting started with py_qs_example</a></li>
+      <li>Next: <a href="tutorial.html" title="next chapter">Getting started with processfiles</a></li>
   </ul></li>
 </ul>
 </div>

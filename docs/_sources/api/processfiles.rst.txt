@@ -1,0 +1,30 @@
+processfiles package
+====================
+
+Submodules
+----------
+
+processfiles.files module
+-------------------------
+
+.. automodule:: processfiles.files
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+processfiles.timing module
+--------------------------
+
+.. automodule:: processfiles.timing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: processfiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
