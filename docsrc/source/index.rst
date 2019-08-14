@@ -3,10 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Quick Start Example documentation!
-*********************************************
+Welcome to Python Process Files documentation!
+************************************************
 
-Some intro text. To get started, look here.
+Use this tool to select files of given file types in a folder, and track whether these files have been processed,
+regardless of whether the script needs to be run multiple times. Stores progress on the files as a text file in the
+same folder, so that a long-running operation on many files can be resumed where it left off if it was stopped.
+It will also automatically estimate time to completion.
 
 .. toctree::
 
@@ -16,31 +19,11 @@ Some intro text. To get started, look here.
 An overview
 ===========
 
-
-My Module
-------------
-
-Some highlighted functionality from my module.
-
-This is a simple example::
-
-    import py_qs_example
-
-    obj = py_qs_example.mymodule.ExampleClass(5, int)
-    print('done')
-
 .. autosummary::
 
-      py_qs_example.mymodule.ExampleClass
-      py_qs_example.mymodule.example_function
+      processfiles.files.FileProcessTracker
+      processfiles.timing.TimeTracker
 
-My Package
-----------------
-
-.. autosummary::
-
-      py_qs_example.mypackage.module.ExampleClass2
-      py_qs_example.mypackage.module.example_function2
 
 API Documentation
 ------------------
