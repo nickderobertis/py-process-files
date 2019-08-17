@@ -32,6 +32,9 @@ class FileProcessTracker:
             self.add_file_to_completed(file)
             timer.time_estimate(num_items)
 
+        # time_estimate is end \r, so this cancels the next output from writing over the final time estimate
+        print('\n')
+
     def add_file_to_completed(self, file):
         self.completed_list.extend([file])
         _update_completed_files(self.completed_list_path, self.completed_list)
