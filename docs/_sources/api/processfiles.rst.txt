@@ -12,6 +12,14 @@ processfiles.files module
    :undoc-members:
    :show-inheritance:
 
+processfiles.filetools module
+-----------------------------
+
+.. automodule:: processfiles.filetools
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 processfiles.timing module
 --------------------------
 

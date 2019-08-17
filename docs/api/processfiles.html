@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>processfiles package &#8212; processfiles 0.1.0 documentation</title>
+    <title>processfiles package &#8212; processfiles 0.1.2 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -43,6 +43,12 @@
 <em class="property">class </em><code class="sig-prename descclassname">processfiles.files.</code><code class="sig-name descname">FileProcessTracker</code><span class="sig-paren">(</span><em class="sig-param">folder=None</em>, <em class="sig-param">restart=False</em>, <em class="sig-param">file_types=('csv'</em>, <em class="sig-param">)</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/files.html#FileProcessTracker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.files.FileProcessTracker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
+<dt id="processfiles.files.FileProcessTracker.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">folder=None</em>, <em class="sig-param">restart=False</em>, <em class="sig-param">file_types=('csv'</em>, <em class="sig-param">)</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/files.html#FileProcessTracker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.files.FileProcessTracker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="processfiles.files.FileProcessTracker.add_file_to_completed">
 <code class="sig-name descname">add_file_to_completed</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/files.html#FileProcessTracker.add_file_to_completed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.files.FileProcessTracker.add_file_to_completed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -70,12 +76,36 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-processfiles.filetools">
+<span id="processfiles-filetools-module"></span><h2>processfiles.filetools module<a class="headerlink" href="#module-processfiles.filetools" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="processfiles.filetools.open_file_with_retries">
+<code class="sig-prename descclassname">processfiles.filetools.</code><code class="sig-name descname">open_file_with_retries</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">retries_remaining=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/filetools.html#open_file_with_retries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.filetools.open_file_with_retries" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="processfiles.filetools.write_to_file_with_retries">
+<code class="sig-prename descclassname">processfiles.filetools.</code><code class="sig-name descname">write_to_file_with_retries</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">content</em>, <em class="sig-param">retries_remaining=10</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/filetools.html#write_to_file_with_retries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.filetools.write_to_file_with_retries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
 <div class="section" id="module-processfiles.timing">
 <span id="processfiles-timing-module"></span><h2>processfiles.timing module<a class="headerlink" href="#module-processfiles.timing" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="processfiles.timing.TimeTracker">
 <em class="property">class </em><code class="sig-prename descclassname">processfiles.timing.</code><code class="sig-name descname">TimeTracker</code><span class="sig-paren">(</span><em class="sig-param">folder</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/timing.html#TimeTracker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.timing.TimeTracker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="processfiles.timing.TimeTracker.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">folder</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/timing.html#TimeTracker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.timing.TimeTracker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="processfiles.timing.TimeTracker.delete_previous_time">
 <code class="sig-name descname">delete_previous_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/timing.html#TimeTracker.delete_previous_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.timing.TimeTracker.delete_previous_time" title="Permalink to this definition">¶</a></dt>
@@ -125,6 +155,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">processfiles package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-processfiles.files">processfiles.files module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-processfiles.filetools">processfiles.filetools module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-processfiles.timing">processfiles.timing module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-processfiles">Module contents</a></li>
 </ul>
