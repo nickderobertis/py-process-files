@@ -1,7 +1,7 @@
 import ast
 import os
-import time
 
+from processfiles.filetools import write_to_file_with_retries, open_file_with_retries
 from processfiles.timing import TimeTracker
 
 
@@ -52,16 +52,7 @@ def _load_to_process_files(folder, completed_list, file_types):
 
 
 def _update_completed_files(completed_list_path, completed_list):
-    _write_to_file_with_retries(completed_list_path, completed_list)
-
-
-def _write_to_file_with_retries(*args, retries_remaining=10, **kwargs):
-    try:
-        with open(args[0], 'w') as f:
-            f.write(f'{args[1]}')
-    except (OSError, PermissionError):
-        time.sleep(.1)
-        _write_to_file_with_retries(*args, retries_remaining=retries_remaining-1, **kwargs)
+    write_to_file_with_retries(completed_list_path, completed_list)
 
 
 def _load_completed_files(completed_list_path):
@@ -70,8 +61,10 @@ def _load_completed_files(completed_list_path):
     if not os.path.exists(completed_list_path):
         return []
 
-    with open(completed_list_path, 'r') as f:
-        completed_list = ast.literal_eval(f.read())
+    list_str = open_file_with_retries(completed_list_path)
+    completed_list = ast.literal_eval(list_str)
+    if not isinstance(completed_list, list):
+        raise ValueError('completed list file contains other than list')
 
     return completed_list
 

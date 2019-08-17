@@ -2,6 +2,8 @@ import os
 import ast
 import timeit
 import datetime
+from processfiles.filetools import write_to_file_with_retries, open_file_with_retries
+
 
 class TimeTracker:
 
@@ -49,20 +51,23 @@ def _delete_time_file(time_filepath):
     if os.path.exists(time_filepath):
         os.remove(time_filepath)
 
+
 def _save_time(time_filepath, time, items_completed):
     time_dict = {
         'time': time,
         'items_completed': items_completed
     }
 
-    with open(time_filepath, 'w') as f:
-        f.write(f'{time_dict}')
+    write_to_file_with_retries(time_filepath, time_dict)
+
 
 def _load_time(time_filepath):
     if not os.path.exists(time_filepath):
         return 0, 0
 
-    with open(time_filepath, 'r') as f:
-        time_dict = ast.literal_eval(f.read())
+    time_str = open_file_with_retries(time_filepath)
+    time_dict = ast.literal_eval(time_str)
+    if not isinstance(time_dict, dict):
+        raise ValueError('got other than dictionary in time file')
 
     return time_dict['time'], time_dict['items_completed']
