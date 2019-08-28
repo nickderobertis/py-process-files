@@ -6,6 +6,15 @@ from processfiles.filetools import write_to_file_with_retries, open_file_with_re
 
 
 class TimeTracker:
+    """
+    Tracks progress and displays estimated finish time.
+
+    Usage:
+    >>> timer = TimeTracker('outfolder')
+    >>> items = [1, 2, 3]
+    >>> for item in items:
+    >>>     timer.time_estimate(len(items))
+    """
 
     def __init__(self, folder, restart=False):
 

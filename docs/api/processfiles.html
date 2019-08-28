@@ -100,6 +100,12 @@
 <dt id="processfiles.timing.TimeTracker">
 <em class="property">class </em><code class="sig-prename descclassname">processfiles.timing.</code><code class="sig-name descname">TimeTracker</code><span class="sig-paren">(</span><em class="sig-param">folder</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/timing.html#TimeTracker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.timing.TimeTracker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tracks progress and displays estimated finish time.</p>
+<p>Usage:
+&gt;&gt;&gt; timer = TimeTracker(‘outfolder’)
+&gt;&gt;&gt; items = [1, 2, 3]
+&gt;&gt;&gt; for item in items:
+&gt;&gt;&gt;     timer.time_estimate(len(items))</p>
 <dl class="method">
 <dt id="processfiles.timing.TimeTracker.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">folder</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/processfiles/timing.html#TimeTracker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#processfiles.timing.TimeTracker.__init__" title="Permalink to this definition">¶</a></dt>
