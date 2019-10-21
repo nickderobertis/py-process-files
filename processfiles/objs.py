@@ -20,10 +20,10 @@ class ObjectProcessTracker(BaseProcessTracker):
 
     def obj_generator(self, chunk: Optional[int] = None):
         timer = TimeTracker(None, restart=self.restart)
-        num_items = len(self.objs)
+        num_items = len([obj for obj in self.objs if not self._has_been_completed(obj)])
 
         if chunk:
-            num_items = math.ceil(len(self.objs) / chunk)
+            num_items = math.ceil(num_items / chunk)
             for objs_chunk in chunk_generator(chunk, self.objs):
                 valid_chunk = []
                 for obj in objs_chunk:
