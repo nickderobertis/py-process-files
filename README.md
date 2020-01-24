@@ -9,7 +9,5 @@ It will also automatically estimate time to completion.
 
 ## Links
 
-See the example 
-[generated documentation here.](
-https://whoopnip.github.io/py-process-files/
-)
+See the example
+[generated documentation here.](https://nickderobertis.github.io/py-process-files/)

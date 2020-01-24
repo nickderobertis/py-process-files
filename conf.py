@@ -16,7 +16,7 @@ Use this tool to select files of given file types in a folder, and track whether
 regardless of whether the script needs to be run multiple times. Stores progress on the files as a text file in the
 same folder, so that a long-running operation on many files can be resumed where it left off if it was stopped.
 It will also automatically estimate time to completion.
-See more at the repo page: https://github.com/whoopnip/py-process-files
+See more at the repo page: https://github.com/nickderobertis/py-process-files
 """
 
 # Author
@@ -63,6 +63,6 @@ DOCS_OTHER_MOCK_IMPORTS = [
 ]
 
 PACKAGE_URLS = {
-    'Code': 'https://github.com/whoopnip/py-process-files/',
-    'Documentation': 'https://whoopnip.github.io/py-process-files/'
+    'Code': 'https://github.com/nickderobertis/py-process-files/',
+    'Documentation': 'https://nickderobertis.github.io/py-process-files/'
 }
